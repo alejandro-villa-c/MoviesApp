@@ -1,0 +1,17 @@
+<div *ngIf="!!movie">
+    <i
+        *ngIf="movie.isFavorite; else notFavoriteMovie;"
+        class="pi pi-star"
+        (click)="markAsFavorite(movie, false)"
+        style="cursor: pointer; font-size: 1.5rem;"
+        title="Remover película favorita">
+    </i>
+    <ng-template #notFavoriteMovie>
+        <i
+            class="pi pi-star-o" 
+            (click)="markAsFavorite(movie, true)"
+            style="cursor: pointer; font-size: 1.5rem;"
+            title="Agregar película favorita">
+        </i>
+    </ng-template>
+</div>

@@ -1,0 +1,32 @@
+<p-tabView>
+    <p-tabPanel>
+        <ng-template pTemplate="header">
+            <span class="p-mr-2">En cartelera</span>
+            <i class="pi pi-video"></i>
+        </ng-template>
+        <app-movies-grid
+            [movies]="movies" 
+            [totalRecords]="totalMovies" 
+            [movieFilter]="movieState.moviesFilter"
+            [genres]="genres"
+            [loading]="loading"
+            [emptyMessage]="'No hay películas en cartelera'"
+            (filterChange)="setMovies($event)">
+        </app-movies-grid>
+    </p-tabPanel>
+    <p-tabPanel>
+        <ng-template pTemplate="header">
+            <span class="p-mr-2">Favoritas</span>
+            <i class="pi pi-star"></i>
+        </ng-template>
+        <app-movies-grid
+            [movies]="favoriteMovies" 
+            [totalRecords]="totalFavoriteMovies" 
+            [movieFilter]="movieState.favoriteMoviesFilter"
+            [genres]="genres"
+            [loading]="loading"
+            [emptyMessage]="'No tienes películas favoritas'"
+            (filterChange)="setFavoriteMovies($event)">
+        </app-movies-grid>
+    </p-tabPanel>
+</p-tabView>

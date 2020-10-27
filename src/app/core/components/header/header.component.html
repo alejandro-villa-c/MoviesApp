@@ -1,0 +1,9 @@
+<p-menubar>
+    <h1 routerLink="/" style="cursor: pointer; outline: none;">
+        Movies App
+    </h1>
+    <div class="p-ml-auto p-d-flex" *ngIf="!!loginState.accountResponse">
+        <p class="p-d-inline-block p-my-auto p-mr-3">{{ loginState.accountResponse.name || loginState.accountResponse.username }}</p>
+        <button pButton icon="pi pi-sign-out" class="p-button-danger" (click)="logout()" title="Cerrar sesión"></button>
+    </div>
+</p-menubar>

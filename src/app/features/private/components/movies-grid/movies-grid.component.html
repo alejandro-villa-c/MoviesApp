@@ -1,0 +1,72 @@
+<p-dataView 
+    [value]="movies" 
+    [paginator]="true" 
+    [rows]="perPage" 
+    [lazy]="true" 
+    (onLazyLoad)="changePage($event)" 
+    [totalRecords]="totalRecords"
+    [showJumpToPageDropdown]="true"
+    [loading]="loading"
+    [emptyMessage]="emptyMessage">
+    <p-header>
+        <div class="p-grid">
+            <div class="p-lg-3 p-sm-12 p-my-auto">
+                <p class="p-mb-2">Ordenar por:</p>
+                <p-dropdown 
+                    [options]="sortOptions" 
+                    [(ngModel)]="sortKey" 
+                    placeholder="Ordenar por"
+                    (onChange)="changeSort($event)">
+                </p-dropdown>
+            </div>
+            <div class="p-lg-3 p-sm-12 p-my-auto">
+                <p class="p-mb-2">Calificación menor a:</p>
+                <p-rating 
+                    [(ngModel)]="rating" 
+                    stars="10" 
+                    [cancel]="false" 
+                    (onRate)="changeRating($event)"
+                >
+                </p-rating>
+            </div>
+            <div class="p-lg-3 p-sm-12 p-my-auto">
+                <p-multiSelect
+                    defaultLabel="Filtrar por géneros"
+                    [showToggleAll]="false"
+                    [options]="multiselectOptions"
+                    [(ngModel)]="selectedGenres"
+                    (onChange)="changeGenres($event)">
+                </p-multiSelect>
+            </div>
+            <div class="p-lg-3 p-sm-12 p-my-auto">
+                <p-button 
+                    class="p-ml-auto" 
+                    label="Reiniciar filtros" 
+                    (onClick)="resetFilters()">
+                </p-button>
+            </div>
+        </div>
+    </p-header>
+    <ng-template let-movie pTemplate="listItem">
+        <div class="p-md-3">
+            <p-card [style]="{height: '100%'}" styleClass="p-card-shadow">
+                <p-header>
+                    <a [routerLink]="'/private/movies/detail/' + movie.id">
+                        <img onerror="this.src='assets/default-poster.jpg';" [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" />
+                    </a>
+                </p-header>
+                <div class="p-d-flex">
+                    <h1 class="p-card-title" [routerLink]="'/private/movies/detail/' + movie.id" style="cursor: pointer; outline: none;">{{ movie.original_title }}</h1>
+                    <div class="p-ml-auto">
+                        <app-favorite-movie-marker [movie]="movie"></app-favorite-movie-marker>
+                    </div>
+                </div>
+                <p class="p-card-subtitle">{{ movie.vote_average }}/10</p>
+                <p class="p-mb-2">{{ movie.overview }}</p>
+                <div class="p-d-flex">
+                    <p class="p-ml-auto p-card-subtitle">{{ movie.release_date | date: 'dd/MM/yyyy' }}</p>
+                </div>
+            </p-card>
+        </div>
+    </ng-template>
+</p-dataView>

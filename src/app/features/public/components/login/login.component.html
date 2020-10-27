@@ -1,0 +1,27 @@
+<div class="p-grid">
+    <div class="p-col-8 p-mx-auto">
+        <h1 class="p-mb-3">Inicio de sesión</h1>
+        <p class="p-mb-5">
+            Debes iniciar sesión con tu cuenta de <a href="https://www.themoviedb.org/" target="_blank">https://www.themoviedb.org/</a>. Si no posees una cuenta puedes crear una en el siguiente enlace: <a href="https://www.themoviedb.org/signup" target="_blank">https://www.themoviedb.org/signup</a>.
+        </p>
+        <div class="p-grid" [formGroup]="loginForm">
+            <div class="p-col-12 p-mb-3">
+                <span class="p-float-label">
+                    <input id="username" type="text" pInputText formControlName="username" style="width: 100%;"> 
+                    <label for="username">Usuario</label>
+                </span>
+            </div>
+            <div class="p-col-12 p-mb-3">
+                <span class="p-float-label">
+                    <input id="password" type="password" pInputText formControlName="password" style="width: 100%;"> 
+                    <label for="password">Contraseña</label>
+                </span>
+            </div>
+            <div class="p-col-12">
+                <div class="p-d-flex">
+                    <p-button class="p-mr-auto" label="Iniciar sesión" (onClick)="login()"></p-button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div *ngIf="movie">
+    <div class="p-grid p-mb-6">
+        <div class="p-lg-4 p-md-6 p-sm-12">
+            <img onerror="this.src='assets/default-poster.jpg';" [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" style="width: 100%; border-radius: 8px;" />
+        </div>
+        <div class="p-lg-7 p-md-6 p-sm-12">
+            <p-card [style]="{height: '100%'}" styleClass="p-card-shadow">
+                <div class="p-mb-3 p-d-flex">
+                    <h1>{{ movie.original_title }}</h1>
+                    <div class="p-ml-auto">
+                        <app-favorite-movie-marker [movie]="movie"></app-favorite-movie-marker>
+                    </div>
+                </div>
+                <div class="p-mb-3">
+                    <h3 class="p-mb-2">Calificación</h3>
+                    <p class="p-text-justify">{{ movie.vote_average }}/10</p>
+                </div>
+                <div class="p-mb-3">
+                    <h3 class="p-mb-2">Sinopsis</h3>
+                    <p class="p-text-justify">{{ movie.overview }}</p>
+                </div>
+                <div class="p-mb-3">
+                    <h3 class="p-mb-2">Estreno</h3>
+                    <p class="p-text-justify">{{ movie.release_date | date: 'dd/MM/yyyy' }}</p>
+                </div>
+                <p-button label="Volver" routerLink="/private/movies"></p-button>
+            </p-card>
+        </div>
+    </div>
+</div>
