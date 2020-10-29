@@ -3,8 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Subscription } from 'rxjs';
 import { MovieState } from 'src/app/core/store/models/MovieState';
-import { Movie } from 'src/app/shared/models/movies/Movie';
-import { MovieService } from 'src/app/shared/services/movie.service';
+import { Movie } from '../../models/Movie';
+import { MovieService } from '../../services/movie.service';
 
 @Component({
     selector: 'app-movie-detail',

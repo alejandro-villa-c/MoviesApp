@@ -8,7 +8,7 @@ const routes: Routes = [
         component: PrivatePageComponent,
         children: [
             { path: '', redirectTo: 'movies', pathMatch: 'full' },
-            { path: 'movies', loadChildren: () => import('./components/movies/movies.module').then(m => m.MoviesModule) }
+            { path: 'movies', loadChildren: () => import('./modules/movies/movies.module').then(m => m.MoviesModule) }
         ]
     },
     { path: '**', redirectTo: '' }

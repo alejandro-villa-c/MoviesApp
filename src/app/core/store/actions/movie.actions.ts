@@ -1,7 +1,7 @@
 import { createAction, props } from '@ngrx/store';
-import { Genre } from 'src/app/shared/models/movies/Genre';
-import { Movie } from 'src/app/shared/models/movies/Movie';
-import { MovieFilter } from 'src/app/shared/models/movies/MovieFilter';
+import { Genre } from 'src/app/features/private/modules/movies/models/Genre';
+import { Movie } from 'src/app/features/private/modules/movies/models/Movie';
+import { MovieFilter } from 'src/app/features/private/modules/movies/models/MovieFilter';
 
 export const setMoviesFilter = createAction('SetMoviesPage', props<{moviesFilter: MovieFilter}>());
 export const setFavoriteMoviesFilter = createAction('SetFavoriteMoviesPage', props<{favoriteMoviesFilter: MovieFilter}>());

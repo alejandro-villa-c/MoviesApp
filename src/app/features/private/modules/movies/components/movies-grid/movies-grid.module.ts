@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { MovieService } from 'src/app/shared/services/movie.service';
-import { SharedModule } from '../../../../shared/shared.module';
+import { SharedModule } from '../../../../../../shared/shared.module';
+import { MovieService } from '../../services/movie.service';
 import { FavoriteMovieMarkerModule } from '../favorite-movie-marker/favorite-movie-marker.module';
 import { MoviesGridComponent } from './movies-grid.component';
 

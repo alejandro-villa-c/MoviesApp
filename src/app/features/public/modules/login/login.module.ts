@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AuthenticationService } from 'src/app/shared/services/authentication.service';
-import { MovieService } from 'src/app/shared/services/movie.service';
+import { MovieService } from 'src/app/features/private/modules/movies/services/movie.service';
+import { AuthenticationService } from 'src/app/features/public/modules/login/services/authentication.service';
 import { SharedModule } from '../../../../shared/shared.module';
 import { LoginComponent } from './login.component';
 

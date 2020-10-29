@@ -1,5 +1,5 @@
 import { createAction, props } from '@ngrx/store';
-import { AccountResponse } from 'src/app/shared/models/authentication/AccountResponse';
+import { AccountResponse } from 'src/app/features/public/modules/login/models/AccountResponse';
 
 export const setRequestToken = createAction('SetRequestToken', props<{requestToken: string}>());
 export const setSessionId = createAction('SetSessionId', props<{sessionId: string}>());

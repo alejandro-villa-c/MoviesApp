@@ -8,7 +8,7 @@ const routes: Routes = [
         path: '',
         component: PublicPageComponent,
         children: [
-            { path: 'login', loadChildren: () => import('./components/login/login.module').then(m => m.LoginModule) }
+            { path: 'login', loadChildren: () => import('./modules/login/login.module').then(m => m.LoginModule) }
         ],
         canActivate: [LoginGuardService]
     },

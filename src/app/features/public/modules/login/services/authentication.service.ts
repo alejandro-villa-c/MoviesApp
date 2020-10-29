@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { GenericResponse } from 'src/app/core/models/GenericResponse';
 import { HttpService } from 'src/app/core/services/http.service';
-import { AccountResponse } from '../models/authentication/AccountResponse';
-import { LoginRequestBody } from '../models/authentication/LoginRequestBody';
-import { LogoutResponse } from '../models/authentication/LogoutResponse';
-import { SessionRequestBody } from '../models/authentication/SessionRequestBody';
-import { SessionResponse } from '../models/authentication/SessionResponse';
-import { TokenResponse } from '../models/authentication/TokenResponse';
+import { AccountResponse } from '../models/AccountResponse';
+import { LoginRequestBody } from '../models/LoginRequestBody';
+import { LogoutResponse } from '../models/LogoutResponse';
+import { SessionRequestBody } from '../models/SessionRequestBody';
+import { SessionResponse } from '../models/SessionResponse';
+import { TokenResponse } from '../models/TokenResponse';
 
 @Injectable()
 export class AuthenticationService {

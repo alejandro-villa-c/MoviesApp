@@ -1,10 +1,10 @@
 import { AfterContentChecked, Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { SelectItem } from 'primeng/api';
 import { defaultMovieFilter } from 'src/app/core/store/reducers/movie.reducer';
-import { Genre } from 'src/app/shared/models/movies/Genre';
-import { Movie } from 'src/app/shared/models/movies/Movie';
-import { MovieFilter } from 'src/app/shared/models/movies/MovieFilter';
-import { MovieSortOptions } from 'src/app/shared/models/movies/MovieSortOptions';
+import { Genre } from 'src/app/features/private/modules/movies/models/Genre';
+import { Movie } from '../../models/Movie';
+import { MovieFilter } from '../../models/MovieFilter';
+import { MovieSortOptions } from '../../filters/sorting/MovieSortOptions';
 
 export const perPage = 20;
 

@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { GenericResponse } from 'src/app/core/models/GenericResponse';
 import { HttpService } from 'src/app/core/services/http.service';
-import { GenresResponse } from '../models/movies/GenresResponse';
-import { MarkAsFavoriteBody } from '../models/movies/MarkAsFavoriteBody';
-import { MarkAsFavoriteResponse } from '../models/movies/MarkAsFavoriteResponse';
-import { Movie } from '../models/movies/Movie';
-import { MovieFilter } from '../models/movies/MovieFilter';
-import { MoviesResponse } from '../models/movies/MoviesResponse';
+import { GenresResponse } from '../models/GenresResponse';
+import { MarkAsFavoriteBody } from '../models/MarkAsFavoriteBody';
+import { MarkAsFavoriteResponse } from '../models/MarkAsFavoriteResponse';
+import { Movie } from '../models/Movie';
+import { MovieFilter } from '../models/MovieFilter';
+import { MoviesResponse } from '../models/MoviesResponse';
 
 @Injectable()
 export class MovieService {

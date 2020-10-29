@@ -4,17 +4,17 @@ import { Store } from '@ngrx/store';
 import { GenericResponse } from 'src/app/core/models/GenericResponse';
 import { setAccountResponse, setRequestToken, setSessionId } from 'src/app/core/store/actions/login.actions';
 import { LoginState } from 'src/app/core/store/models/LoginState';
-import { AccountResponse } from 'src/app/shared/models/authentication/AccountResponse';
-import { LoginRequestBody } from 'src/app/shared/models/authentication/LoginRequestBody';
-import { SessionRequestBody } from 'src/app/shared/models/authentication/SessionRequestBody';
-import { SessionResponse } from 'src/app/shared/models/authentication/SessionResponse';
-import { TokenResponse } from 'src/app/shared/models/authentication/TokenResponse';
-import { AuthenticationService } from 'src/app/shared/services/authentication.service';
+import { AccountResponse } from 'src/app/features/public/modules/login/models/AccountResponse';
+import { AuthenticationService } from 'src/app/features/public/modules/login/services/authentication.service';
 import { Router } from '@angular/router';
 import { MovieState } from 'src/app/core/store/models/MovieState';
 import { setFavoriteMoviesAction } from 'src/app/core/store/actions/movie.actions';
-import { Movie } from 'src/app/shared/models/movies/Movie';
-import { MovieService } from 'src/app/shared/services/movie.service';
+import { MovieService } from 'src/app/features/private/modules/movies/services/movie.service';
+import { TokenResponse } from './models/TokenResponse';
+import { SessionResponse } from './models/SessionResponse';
+import { LoginRequestBody } from './models/LoginRequestBody';
+import { SessionRequestBody } from './models/SessionRequestBody';
+import { Movie } from 'src/app/features/private/modules/movies/models/Movie';
 
 @Component({
     selector: 'app-login',

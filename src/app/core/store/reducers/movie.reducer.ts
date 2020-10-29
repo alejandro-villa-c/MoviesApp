@@ -1,7 +1,7 @@
 import { Action, createReducer, on } from '@ngrx/store';
-import { Movie } from 'src/app/shared/models/movies/Movie';
-import { MovieFilter } from 'src/app/shared/models/movies/MovieFilter';
-import { MovieSortOptions } from 'src/app/shared/models/movies/MovieSortOptions';
+import { Movie } from 'src/app/features/private/modules/movies/models/Movie';
+import { MovieFilter } from 'src/app/features/private/modules/movies/models/MovieFilter';
+import { MovieSortOptions } from 'src/app/features/private/modules/movies/filters/sorting/MovieSortOptions';
 import { setFavoriteMovie, setFavoriteMoviesAction, setFavoriteMoviesFilter, setGenresAction, setMoviesAction, setMoviesFilter, setTotalMovies } from '../actions/movie.actions';
 import { MovieState } from '../models/MovieState';
 

@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { LogoutResponse } from 'src/app/shared/models/authentication/LogoutResponse';
-import { AuthenticationService } from 'src/app/shared/services/authentication.service';
+import { LogoutResponse } from 'src/app/features/public/modules/login/models/LogoutResponse';
+import { AuthenticationService } from 'src/app/features/public/modules/login/services/authentication.service';
 import { GenericResponse } from '../../models/GenericResponse';
 import { setAccountResponse, setRequestToken, setSessionId } from '../../store/actions/login.actions';
 import { setFavoriteMoviesAction } from '../../store/actions/movie.actions';

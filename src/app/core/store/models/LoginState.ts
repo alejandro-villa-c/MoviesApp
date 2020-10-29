@@ -1,4 +1,4 @@
-import { AccountResponse } from 'src/app/shared/models/authentication/AccountResponse';
+import { AccountResponse } from 'src/app/features/public/modules/login/models/AccountResponse';
 
 export class LoginState {
     constructor(

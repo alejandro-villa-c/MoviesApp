@@ -3,10 +3,10 @@ import { Store } from '@ngrx/store';
 import { GenericResponse } from 'src/app/core/models/GenericResponse';
 import { setFavoriteMovie } from 'src/app/core/store/actions/movie.actions';
 import { LoginState } from 'src/app/core/store/models/LoginState';
-import { MarkAsFavoriteBody } from 'src/app/shared/models/movies/MarkAsFavoriteBody';
-import { MarkAsFavoriteResponse } from 'src/app/shared/models/movies/MarkAsFavoriteResponse';
-import { Movie } from 'src/app/shared/models/movies/Movie';
-import { MovieService } from 'src/app/shared/services/movie.service';
+import { MarkAsFavoriteBody } from '../../models/MarkAsFavoriteBody';
+import { MarkAsFavoriteResponse } from '../../models/MarkAsFavoriteResponse';
+import { Movie } from '../../models/Movie';
+import { MovieService } from '../../services/movie.service';
 
 @Component({
     selector: 'app-favorite-movie-marker',

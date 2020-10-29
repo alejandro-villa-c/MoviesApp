@@ -1,15 +1,15 @@
 import { AfterContentChecked, Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { MoviesResponse } from 'src/app/shared/models/movies/MoviesResponse';
-import { Movie } from 'src/app/shared/models/movies/Movie';
-import { MovieService } from 'src/app/shared/services/movie.service';
 import { MovieState } from 'src/app/core/store/models/MovieState';
 import { setFavoriteMoviesFilter, setGenresAction, setMoviesAction, setMoviesFilter, setTotalMovies } from 'src/app/core/store/actions/movie.actions';
-import { MovieFilter } from 'src/app/shared/models/movies/MovieFilter';
-import { Genre } from 'src/app/shared/models/movies/Genre';
-import { MovieFilterService } from 'src/app/shared/services/movie-filter.service';
+import { Genre } from 'src/app/features/private/modules/movies/models/Genre';
+import { MovieFilterService } from 'src/app/features/private/modules/movies/services/movie-filter.service';
 import { GenericResponse } from 'src/app/core/models/GenericResponse';
-import { GenresResponse } from 'src/app/shared/models/movies/GenresResponse';
+import { Movie } from './models/Movie';
+import { MovieService } from './services/movie.service';
+import { MovieFilter } from './models/MovieFilter';
+import { MoviesResponse } from './models/MoviesResponse';
+import { GenresResponse } from './models/GenresResponse';
 
 @Component({
     selector: 'app-movies',
