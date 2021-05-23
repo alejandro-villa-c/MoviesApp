@@ -24,12 +24,15 @@ export class AuthenticationService {
     }
 
     public async login(loginRequestBody: LoginRequestBody): Promise<GenericResponse<TokenResponse>> {
-        return await this.httpService.post<TokenResponse, LoginRequestBody>(`${this.authenticationPath}/${this.tokenPath}/validate_with_login`, loginRequestBody);
+        return await this.httpService.post<TokenResponse, LoginRequestBody>(
+            `${this.authenticationPath}/${this.tokenPath}/validate_with_login`, loginRequestBody
+        );
     }
 
     public async getSessionId(sessionRequestBody: SessionRequestBody): Promise<GenericResponse<SessionResponse>> {
         return await this.httpService.post<SessionResponse, SessionRequestBody>(
-            `${this.authenticationPath}/${this.sessionPath}/new`, sessionRequestBody);
+            `${this.authenticationPath}/${this.sessionPath}/new`, sessionRequestBody
+        );
     }
 
     public async getAccountDetails(sessionId: string): Promise<GenericResponse<AccountResponse>> {

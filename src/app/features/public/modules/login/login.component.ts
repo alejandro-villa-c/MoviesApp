@@ -65,7 +65,7 @@ class LoginStatus {
 abstract class LoginChecker {
     public successor: LoginChecker = null;
 
-    public abstract async check(loginStatus: LoginStatus): Promise<void>;
+    public abstract check(loginStatus: LoginStatus): Promise<void>;
 
     public succeedWith(successor: LoginChecker): void {
         this.successor = successor;

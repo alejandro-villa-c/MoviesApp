@@ -3,5 +3,6 @@ export class LoginRequestBody {
         public username: string,
         public password: string,
         // tslint:disable-next-line: variable-name
-        public request_token: string) {}
+        public request_token: string
+    ) {}
 }

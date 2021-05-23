@@ -1,3 +1,5 @@
+import { Genre } from "./Genre";
+
 export class Movie {
     constructor(
         public popularity: number,
@@ -22,6 +24,7 @@ export class Movie {
         public overview: string,
         // tslint:disable-next-line: variable-name
         public release_date: string,
-        public isFavorite: boolean
+        public isFavorite: boolean,
+        public genres: Genre[]
     ) {}
 }
